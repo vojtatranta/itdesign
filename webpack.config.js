@@ -7,6 +7,11 @@ const args = yargs
     .argv
 
 
+if (args.production) {
+    process.env.NODE_ENV = 'production'
+}
+
+
 module.exports = {
     debug: !args.production, //nastavuje mod loaderům
     devtool: args.production ? 'source-map' : 'eval-source-map',
@@ -14,7 +19,7 @@ module.exports = {
         'babel-polyfill',
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/dev-server',
-        './src/prod/index.js', 
+        './src/index.js', 
     ] : [
         'babel-polyfill',
         './src/prod/index.js', 

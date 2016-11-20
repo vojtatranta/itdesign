@@ -5,22 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --hot --content-base dist/",
+    "start": "webpack-dev-server --hot --progress --colors",
     "build": "webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webdev-js-evenings/webpack-workshop.git"
+    "url": "git+https://github.com/vojtatranta/itdesign.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/webdev-js-evenings/webpack-workshop/issues"
+    "url": "https://github.com/vojtatranta/itdesign/issues"
   },
-  "homepage": "https://github.com/webdev-js-evenings/webpack-workshop#readme",
+  "homepage": "https://github.com/vojtatranta/itdesign#readme",
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
-    "babel": "^6.5.2",
     "babel-loader": "^6.2.5",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-react-transform": "^2.0.2",
@@ -44,6 +43,8 @@
     "yargs": "^5.0.0"
   },
   "dependencies": {
+    "aphrodite": "^1.1.0",
+    "babel-core": "^6.18.2",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   }

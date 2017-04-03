@@ -6,7 +6,7 @@ import App from './src/app'
 
 export default (locals) => {
   const result = StyleSheetServer.renderStatic(() => {
-    return ReactDOMServer.renderToStaticMarkup(<App/>)
+    return ReactDOMServer.renderToStaticMarkup(<App />)
   })
 
   return locals.HTML

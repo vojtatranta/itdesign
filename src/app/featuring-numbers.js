@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
   },
   numHeading: {
     margin: 0,
+    fontWeight: 300,
     marginBottom: rem(10),
     fontSize: rem(36),
     lineHeight: rem(36),
@@ -74,26 +75,29 @@ export default () => {
     <div className={css(styles.flex)}>
       <Num number={1} heading="Webdesign">
         <p className={css(styles.numDescription)}>
-          návrhy a realizace webů<br/>a webových aplikací
+          návrhy a realizace webů<br />a webových aplikací
         </p>
       </Num>
       <Num
         number={2}
         heading="Správa webů"
-        text="aktualizace obsahu, úpravy vzhledu i funkcí - redesign webů" />
+        text="aktualizace obsahu, úpravy vzhledu i funkcí - redesign webů"
+      />
       <Num
         bottom
         number={3}
         heading="Tvorba obsahu a správa online komunikace"
-        text="na webu, sociálních sítích, i v e-mailingu" />
+        text="na webu, sociálních sítích, i v e-mailingu"
+      />
       <Num
         bottom
         number={4}
-        heading="Konzultace a technický dozor">
+        heading="Konzultace a technický dozor"
+      >
         <p className={css(styles.numDescription)}>
-          plánování a řízení webových projektů<br/>s důrazem na použitelnost, konzultace<br/>v online marketingu
+          plánování a řízení webových projektů<br />s důrazem na použitelnost, konzultace<br />v online marketingu
         </p>
-        </Num>
+      </Num>
     </div>
   )
 }

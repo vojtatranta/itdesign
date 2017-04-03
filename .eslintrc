@@ -1,0 +1,155 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "import",
+    "react",
+    "flowtype",
+    "jest",
+    "mutation"
+  ],
+  "extends": [ "airbnb" ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true
+  },
+  "rules": {
+    "array-bracket-spacing": 0,
+    "arrow-body-style": 0,
+    "comma-dangle": [ 2, "always-multiline" ],
+    "consistent-return": 0,
+    "camelcase": 1,
+    "default-case": 0,
+    "dot-notation": 0,
+    "func-names": 0,
+    "global-require": 0,
+    "import/default": 2,
+    "import/export": 2,
+    "import/imports-first": 0,
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/no-extraneous-dependencies": [
+      "warn", {
+        "devDependencies": true
+      }
+    ],
+    "import/no-unresolved": [
+      "error", {
+        "commonjs": true,
+        "amd": true,
+        "ignore": [ "electron" ]
+      }
+    ],
+    "import/prefer-default-export": 1,
+    "import/no-duplicates": 2,
+    "no-duplicate-imports": 0,
+    "jsx-quotes": 0,
+    "new-cap": 0,
+    "max-len": 0,
+    "no-console": [
+      "error", {
+        "allow": [
+          "debug",
+          "info",
+          "warn",
+          "error",
+          "fatal"
+        ]
+      }
+    ],
+    "no-fallthrough": 1,
+    "no-global-assign": 0,
+    "no-irregular-whitespace": [
+      "error", {
+        "skipStrings": true,
+        "skipTemplates": true,
+        "skipRegExps": true
+      }
+    ],
+    "no-lonely-if": 0,
+    "no-param-reassign": 0,
+    "no-shadow": 1,
+    "no-underscore-dangle": 0,
+    "no-unsafe-negation": 0,
+    "no-unused-expressions": 0,
+    "no-unused-vars": [
+      "warn", {
+        "vars": "all",
+        "caughtErrors": "all"
+      }
+    ],
+    "no-use-before-define": [
+      "warn", {
+        "functions": false,
+        "classes": true
+      }
+    ],
+    "quote-props": 0,
+    "react/no-find-dom-node": 1,
+    "react/prop-types": 1,
+    "react/no-did-mount-set-state": 1,
+    "react/no-did-update-set-state": 1,
+    "react/prefer-stateless-function": 0,
+    "react/jsx-curly-spacing": 0,
+    "react/jsx-no-bind": 0,
+    "react/jsx-filename-extension": 0,
+    "react/sort-comp": [2, {
+      "order": [
+        "type-annotations",
+        "static-methods",
+        "lifecycle",
+        "everything-else",
+        "render"
+      ]
+    }],
+    "semi": [ 2, "never" ],
+    "flowtype/boolean-style": [ 2, "boolean" ],
+    "flowtype/define-flow-type": 1,
+    "flowtype/delimiter-dangle": 0,
+    "flowtype/generic-spacing": [ 2, "never" ],
+    "flowtype/no-weak-types": 0,
+    "flowtype/require-parameter-type": 0,
+    "flowtype/require-return-type": 0,
+    "flowtype/require-valid-file-annotation": 0,
+    "flowtype/semi": 0,
+    "flowtype/space-after-type-colon": [ 2, "always" ],
+    "flowtype/space-before-generic-bracket": [ 2, "never" ],
+    "flowtype/space-before-type-colon": [ 2, "never" ],
+    "flowtype/type-id-match": 0,
+    "flowtype/union-intersection-spacing": [ 2, "always" ],
+    "flowtype/use-flow-type": 1,
+    "flowtype/valid-syntax": 1,
+    "mutation/no-mutation": [
+      "warn", {
+        "exceptions": [
+          "this",
+          "that",
+          "global",
+          "window"
+        ]
+      }
+    ]
+  },
+  "globals": {
+    "require": false,
+    "ga": false,
+    "shallowRender": false,
+    "mountRender": false,
+    "jest": false
+  },
+  "settings": {
+     "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    },
+    "import/ignore": [
+      "node_modules",
+      "\\.json$"
+    ],
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack-js.config.coffee"
+      }
+    },
+    "import/parser": "babel-eslint"
+  }
+}

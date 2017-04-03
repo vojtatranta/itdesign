@@ -1,19 +1,24 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
+import { rem } from '../styles/vars'
 
 import Header from './header'
 import FeaturingNumbers from './featuring-numbers'
 import TaxRefundInfo from './tax-refund-info'
+import NavLinks from './nav-links'
+import Posts from './posts'
+import UpButton from './up-button'
+import Contact from './contact'
 
 
 const styles = StyleSheet.create({
   base: {
     margin: '0 auto',
-    maxWidth: '1028px',
+    maxWidth: rem(1028),
     textAlign: 'center',
-    fontFamily: "'Open Sans', Helvetica, Verdana", 
+    fontFamily: "'Open Sans', Helvetica, Verdana",
     fontWeight: 300,
-  }
+  },
 })
 
 
@@ -23,6 +28,9 @@ export default () => {
       <Header />
       <FeaturingNumbers />
       <TaxRefundInfo />
+      <Posts />
+      <UpButton />
+      <Contact />
     </div>
   )
 }

@@ -11,12 +11,19 @@ const args = yargs
     .alias('r', 'render')
     .argv
 
-
 args.production = args.render || args.production
 
 if (args.production) {
   process.env.NODE_ENV = 'production'
 }
+
+const definPlugin = new webpack.DefinePlugin({
+  'process.env': {
+    'NODE_ENV': JSON.stringify(args.production ? 'production' : 'development'),
+  },
+  '__DEVTOOLS__': !args.production,
+  '__DEV__': !args.production,
+})
 
 const plugins = args.production ? [
   new ExtractTextPlugin('style.css', { allChunks: true }),
@@ -31,14 +38,8 @@ const plugins = args.production ? [
     HTML,
   }),
   new webpack.optimize.DedupePlugin(),
-  new webpack.DefinePlugin({
-    'process.env': {
-      'NODE_ENV': JSON.stringify(args.production ? 'production' : 'development'),
-    },
-    '__DEVTOOLS__': !args.production,
-    '__DEV__': !args.production,
-  }),
-] : []
+  definPlugin,
+] : [definPlugin]
 
 
 module.exports = {
@@ -54,7 +55,8 @@ module.exports = {
   output: {
     path: './docs/',
     filename: '[name].js',
-    libraryTarget: args.production ? 'umd' : 'commonjs2',
+    libraryTarget: args.production ? 'umd' : undefined,
+    publicPath: '/',
   },
   resolve: {
     extensions: ['', '.css', '.js'],
@@ -65,6 +67,10 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
+      },
+      {
+        test: /\.html$/,
+        loader: 'text',
       },
       {
         test: /\.css$/,

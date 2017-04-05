@@ -6,7 +6,7 @@ import { rem } from '../styles/vars'
 
 const styles = StyleSheet.create({
   upButton: {
-    background: `no-repeat url(${require('../images/up-button.svg')})`,
+    background: `no-repeat url(${require('../images/up-button.png')})`,
     width: rem(56),
     height: rem(56),
     color: 'white',
@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
 
 export default () => {
   return (
-    <a href="#" className={css(styles.upButton)}>^</a>
+    <a href="#" className={css(styles.upButton)}>&nbsp;</a>
   )
 }

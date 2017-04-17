@@ -30,6 +30,7 @@ export default () => {
       <Posts />
       <UpButton />
       <Contact />
+      <UpButton />
     </div>
   )
 }

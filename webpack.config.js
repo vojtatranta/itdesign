@@ -44,7 +44,7 @@ const plugins = args.production ? [
 
 module.exports = {
   debug: !args.production, // nastavuje mod loaderům
-  devtool: args.production ? 'source-map' : 'eval-source-map',
+  devtool: args.production ? null : 'eval-source-map',
   entry: {
     index: './server-render.js',
     bundle: [
@@ -56,7 +56,6 @@ module.exports = {
     path: './docs/',
     filename: '[name].js',
     libraryTarget: args.production ? 'umd' : undefined,
-    publicPath: '/',
   },
   resolve: {
     extensions: ['', '.css', '.js'],

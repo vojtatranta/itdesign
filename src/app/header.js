@@ -7,13 +7,14 @@ import { StyleSheet, css } from 'aphrodite'
 const styles = StyleSheet.create({
   headline: {
     fontWeight: 300,
-    margin: `0 auto ${rem(5)}`,
+    margin: `${rem(80)} auto 0`,
     fontSize: rem(36),
   },
   subheadline: {
     color: '#009700',
     fontWeight: '300',
     marginBottom: rem(70),
+    marginTop: rem(5),
   },
 })
 

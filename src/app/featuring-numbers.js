@@ -13,6 +13,12 @@ const styles = StyleSheet.create({
     alignContent: 'space-between',
     width: rem(910),
     margin: '0 auto',
+    '@media (max-width: 925px)': {
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%',
+    },
   },
   numberContainer: {
     display: 'flex',
@@ -20,6 +26,13 @@ const styles = StyleSheet.create({
     maxWidth: rem(424),
     minWidth: '50%',
     marginBottom: rem(18),
+    '@media (max-width: 925px)': {
+      marginTop: rem(18),
+      width: rem(420),
+    },
+    '@media (max-width: 425px)': {
+      width: '95%',
+    },
   },
   number: {
     backgroundImage: `url(${require('../images/num-backg.svg')})`,
@@ -73,26 +86,26 @@ const Num = ({ bottom, number, heading, text, children }) => {
 export default () => {
   return (
     <div className={css(styles.flex)}>
-      <Num number={1} heading="Webdesign">
+      <Num number={1} heading='Webdesign'>
         <p className={css(styles.numDescription)}>
           návrhy a realizace webů<br />a webových aplikací
         </p>
       </Num>
       <Num
         number={2}
-        heading="Správa webů"
-        text="aktualizace obsahu, úpravy vzhledu i funkcí - redesign webů"
+        heading='Správa webů'
+        text='aktualizace obsahu, úpravy vzhledu i funkcí - redesign webů'
       />
       <Num
         bottom
         number={3}
-        heading="Tvorba obsahu a správa online komunikace"
-        text="na webu, sociálních sítích, i v e-mailingu"
+        heading='Tvorba obsahu a správa online komunikace'
+        text='na webu, sociálních sítích, i v e-mailingu'
       />
       <Num
         bottom
         number={4}
-        heading="Konzultace a technický dozor"
+        heading='Konzultace a technický dozor'
       >
         <p className={css(styles.numDescription)}>
           plánování a řízení webových projektů<br />s důrazem na použitelnost, konzultace<br />v online marketingu

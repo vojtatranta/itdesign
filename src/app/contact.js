@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     border: '1px solid #e5e5e5',
     backgroundColor: 'white',
     width: '100%',
+    boxSizing: 'border-box',
   },
 
   input: {

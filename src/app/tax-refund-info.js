@@ -8,14 +8,15 @@ import classNames from 'classnames'
 const styles = StyleSheet.create({
   taxRefundContainer: {
     margin: '0 auto',
-    width: rem(493),
+    maxWidth: rem(493),
     marginTop: rem(49),
     display: 'flex',
     textAlign: 'left',
   },
   triangle: {
     backgroundImage: `url(${require('../images/triangle.svg')})`,
-    color: `#fff`,
+    color: '#fff',
+    backgroundRepeat: 'no-repeat',
     fontSize: rem(106),
     fontStyle: 'italic',
     fontWeight: 700,
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     margin: 0,
     marginTop: rem(15),
     fontSize: rem(14),
-  }
+  },
 })
 
 

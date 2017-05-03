@@ -5,9 +5,18 @@ export default () => {
   return (
     <html lang="en">
       <head>
-        <meta charSet="UTF-8" />
-        <title>itDesign | tvorba webových stránek</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=latin-ext" rel="stylesheet" />
+        <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <meta description="itDesign.cz: Petr Hřích - komplexní správa webové prezentace" />
+    <link href="./style.css" prefetch rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,800i,400&amp;subset=latin-ext" rel="stylesheet" />
+    <script>
+    WebFont.load({
+      google: {
+        families: ['Open Sans']
+      }
+    });
+  </script>
       </head>
       <body>
         <div id="root" />

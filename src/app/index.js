@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     margin: '0 auto',
     maxWidth: rem(1028),
     textAlign: 'center',
-    fontFamily: "'Open Sans', Helvetica, Verdana",
+    fontFamily: 'Helvetica, Verdana, sans-serif',
     fontWeight: 300,
   },
 })
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 
 export default () => {
   return (
-    <div className={css(styles.base)}>
+    <div id='base' className={css(styles.base)}>
       <Header />
       <FeaturingNumbers />
       <TaxRefundInfo />

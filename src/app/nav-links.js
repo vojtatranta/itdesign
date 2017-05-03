@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
   linksContainer: {
     margin: '94px auto 0',
     textAlign: 'center',
-    fontFamily: "'Open Sans', Helvetica, Verdana",
   },
   link: {
     display: 'inline-block',

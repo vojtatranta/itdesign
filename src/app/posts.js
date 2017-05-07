@@ -3,9 +3,6 @@ import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import { rem } from '../styles/vars'
 
-import HTML from '../static.html'
-
-
 const styles = StyleSheet.create({
   postsContainer: {
     textAlign: 'center',
@@ -15,8 +12,8 @@ const styles = StyleSheet.create({
 })
 
 
-export default () => {
+export default ({ posts }) => {
   return (
-    <div className={css(styles.postsContainer)} dangerouslySetInnerHTML={{ __html: HTML }} />
+    <div className={css(styles.postsContainer)} id="posts" dangerouslySetInnerHTML={{ __html: posts }} />
   )
 }

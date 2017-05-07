@@ -21,13 +21,13 @@ const styles = StyleSheet.create({
 })
 
 
-export default () => {
+export default ({ posts }) => {
   return (
     <div id='base' className={css(styles.base)}>
       <Header />
       <FeaturingNumbers />
       <TaxRefundInfo />
-      <Posts />
+      <Posts posts={posts} />
       <UpButton />
       <Contact />
       <UpButton />

@@ -19,7 +19,7 @@ export default () => {
   </script>
       </head>
       <body>
-        <div id="root" />
+        <div id="root"></div>
       </body>
       <script src="/bundle.js" />
     </html>

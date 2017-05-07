@@ -5,6 +5,11 @@ import App from './app'
 
 import style from './styles/style.css'
 
+import HTML from './static.html'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+
+const postsEl = document.getElementById('posts') || {}
+const html = postsEl.innerHTML || HTML
+
+ReactDOM.render(<App posts={html} />, document.getElementById('root'))
 
